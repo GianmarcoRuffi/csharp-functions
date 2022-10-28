@@ -10,6 +10,9 @@
 //Stampare la somma di tutti i numeri elevati al quadrato
 
 
+//BONUS: Convertire le funzioni appena dichiarate in funzioni generiche, ossia funzioni che possono lavorare con array di numeri interi di lunghezza variabile, ossia debbono poter funzionare sia che gli passi array di 5 elementi, sia di 6, di 7, di ... e così via. A questo punto modificare il programma in modo che chieda all’utente quanti numeri voglia inserire, e dopo di che questi vengono inseriti a mano dall’utente esternamente.
+//Rieseguire il programma con l’input preso esternamente dall’utente.
+
 // Definizione delle funzioni di base:
 
 using System;
@@ -48,9 +51,31 @@ int SommaElementiArray(int[] array)
     return somma;
 }
 
+//////////////////////////////////
+
 // Definizione dell'array di numeri:
 
-int[] myArray = { 2, 6, 7, 5, 3, 9 };
+//int[] myArray = { 2, 6, 7, 5, 3, 9 };
+
+//////////////////////////////////
+
+// L'utente definisce la lunghezza dell'array:
+
+Console.Write("Inserire di quanti numeri si vuole comporre l'array: ");
+int N = Convert.ToInt32(Console.ReadLine());
+
+
+// Creazione dell'array con lunghezza definita dall'utente:
+
+int[] myArray = new int[N];
+
+// Ciclo per l'aggiunta dei numeri da inserire nell'array:
+
+for (int i = 0; i < N; i++)
+{
+    Console.Write("Aggiungi il numero all'array: ");
+    myArray[i] = Convert.ToInt32(Console.ReadLine());
+}
 
 // Stampa array a video
 
