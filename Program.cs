@@ -7,7 +7,7 @@
 //Stampare l’array di numeri fornito a video
 //Stampare l’array di numeri fornito a video, dove ogni numero è stato prima elevato al quadrato (Verificare che l’array originale non sia stato modificato quindi ristampare nuovamente l’array originale e verificare che sia rimasto [2, 6, 7, 5, 3, 9])
 //Stampare la somma di tutti i numeri
-//Stampare la somma di tutti i numeri elevati al quadrati
+//Stampare la somma di tutti i numeri elevati al quadrato
 
 
 // Definizione delle funzioni di base:
@@ -55,6 +55,7 @@ int[] myArray = { 2, 6, 7, 5, 3, 9 };
 // Stampa array a video
 
 StampaArray(myArray);
+
 Console.WriteLine();
 
 // Stampare l’array di numeri fornito a video, dove ogni numero è stato prima elevato al quadrato
@@ -64,4 +65,13 @@ StampaArray(arrayAlQuadrato);
 
 Console.WriteLine();
 
+// Stampare la somma di tutti i numeri
+
+Console.WriteLine("Somma dei numeri dell'array: " + SommaElementiArray(myArray));
+
+Console.WriteLine();
+
+// Stampare la somma di tutti i numeri elevati al quadrato
+
+Console.WriteLine("Somma dei numeri dell'array al quadrato: " + SommaElementiArray(arrayAlQuadrato));
 
