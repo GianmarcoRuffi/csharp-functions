@@ -12,6 +12,8 @@
 
 // Definizione delle funzioni di base:
 
+using System;
+
 void StampaArray(int[] array)
 {
     Console.Write("[ ");
@@ -51,4 +53,15 @@ int SommaElementiArray(int[] array)
 int[] myArray = { 2, 6, 7, 5, 3, 9 };
 
 // Stampa array a video
+
+StampaArray(myArray);
+Console.WriteLine();
+
+// Stampare l’array di numeri fornito a video, dove ogni numero è stato prima elevato al quadrato
+
+int[] arrayAlQuadrato = ElevaArrayAlQuadrato(myArray);
+StampaArray(arrayAlQuadrato);
+
+Console.WriteLine();
+
 
