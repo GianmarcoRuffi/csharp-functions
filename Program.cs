@@ -45,3 +45,10 @@ int SommaElementiArray(int[] array)
     }
     return somma;
 }
+
+// Definizione dell'array di numeri:
+
+int[] myArray = { 2, 6, 7, 5, 3, 9 };
+
+// Stampa array a video
+
