@@ -18,6 +18,7 @@
 using System;
 
 
+
 // CIFRARIO DI CESARE
 //Realizzare un programma in grado di CRIPTARE e DECRIPTARE una stringa inserita nell’utente con la strategia di criptazione nota come “IL CIFRARIO DI CESARE”
 //l’utente inserisce una stringa da criptare / decriptare
@@ -36,7 +37,7 @@ string decryptText = "";
 Console.WriteLine("Scrivi la frase o la parola che desideri criptare: ");
 userSendsText = Console.ReadLine();
 
-Console.WriteLine("Inserisci la chiave che desideri utilizzare per criptare le lettere: ");
+Console.WriteLine("Inserisci la chiave che desideri utilizzare: ");
 key = Convert.ToInt32(Console.ReadLine());
 
 // Ciclo per sostituire le lettere in base al valore della chiave
@@ -52,7 +53,7 @@ for (int i = 0; i < userSendsText.Length; i++)
 }
 
 // Riporta la frase criptata
-Console.WriteLine($"Encrypted Text: {encryptedText}");
+Console.WriteLine($"Testo Criptato: {encryptedText}");
 
 
 // Ciclo per decriptare la frase sottraendo il valore dichiarato della chiave dalla posizione della lettera
@@ -67,7 +68,8 @@ for (int i = 0; i < encryptedText.Length; i++)
 }
 
 // Riporta la frase decriptata
-Console.WriteLine($"Decrypt Text: {decryptText}");
+Console.WriteLine("");
+Console.WriteLine($"Testo Decriptato: {decryptText}");
 
 
 
@@ -75,43 +77,39 @@ return;
 
 
 
-
-
 // Esercizio Fibonacci
-//Si chiede di implementare 
+//Si chiede di implementare due funzioni che eseguano le corrsipettive funzioni matematiche:
 //1 - Fattoriale di un numero
-//2 - La sequenza di 
-//1) il fattoriale di un numero 
-//0! = 1
-//1! = 1
-//2! = 2
-//3! = 6
-//4! = 24
-//5! = 120
-//N! = ???
-//risolverla in modo RICORSIVO
-//o anche in modo ITERATIVO (FOR)
-//n Fn
-//0	0
-//1	1
-//2	1
-//3	2
-//4	3
-//5	5
-//6	8
-//7	13
-//8	21
-//9	34
-//10	55
-//fibonacci(10) = 55
-//isolverla in modo RICORSIVO
-//o anche in modo ITERATIVO (FOR)
+//1) il fattoriale di un numero può essere calcolato solo su numeri positivi:
+//0! = 1 1! = 1 2! = 2 3! = 6 4! = 24 5! = 120 N! = ???
+//    risolverla in modo RICORSIVO o anche in modo ITERATIVO (FOR)
 
 
 
 
+{
+
+    // Calcolo di un fattoriale di un numero
+
+    int i, number, fact;
+    Console.WriteLine("Inserire il numero:");
+    number = int.Parse(Console.ReadLine());
+    fact = number;
+    for (i = number - 1; i >= 1; i--)
+    {
+        fact = fact * i;
+    }
+    Console.WriteLine("\nIl fattoriale del numero inserito é: " + fact);
+    Console.ReadLine();
+
+}
 
 
+return;
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 void StampaArray(int[] array)
