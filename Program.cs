@@ -17,6 +17,103 @@
 
 using System;
 
+
+// CIFRARIO DI CESARE
+//Realizzare un programma in grado di CRIPTARE e DECRIPTARE una stringa inserita nell’utente con la strategia di criptazione nota come “IL CIFRARIO DI CESARE”
+//l’utente inserisce una stringa da criptare / decriptare
+//l’utente inserisce una chiave numerica per effettuare la criptazione / decriptazione della stringa inserita
+
+
+// Definizione delle variabili iniziali standard e dei valori iniziali di criptazione
+int encryption = 0, key = 0;
+string userSendsText = "", encryptedText = "";
+
+// // // // Variabili di decriptazione
+int decryption = 0;
+string decryptText = "";
+
+// Richiesta all'utente di definire la frase da criptare e la chiave che desidera utilizzare
+Console.WriteLine("Scrivi la frase o la parola che desideri criptare: ");
+userSendsText = Console.ReadLine();
+
+Console.WriteLine("Inserisci la chiave che desideri utilizzare per criptare le lettere: ");
+key = Convert.ToInt32(Console.ReadLine());
+
+// Ciclo per sostituire le lettere in base al valore della chiave
+for (int i = 0; i < userSendsText.Length; i++)
+{
+    int txtUser = (int)userSendsText[i];
+
+    // Sostituzione del testo in base alla posizione dichiarata nella chiave
+    encryption = txtUser + key;
+
+    // Utilizzo dei caratteri speciali
+    encryptedText += Char.ConvertFromUtf32(encryption);
+}
+
+// Riporta la frase criptata
+Console.WriteLine($"Encrypted Text: {encryptedText}");
+
+
+// Ciclo per decriptare la frase sottraendo il valore dichiarato della chiave dalla posizione della lettera
+for (int i = 0; i < encryptedText.Length; i++)
+{
+    int encrypted = (int)encryptedText[i];
+
+    // Sostituzione del testo in base alla sottrazione della posizione dichiarata nella chiave
+    decryption = encrypted - key;
+
+    decryptText += Char.ConvertFromUtf32(decryption);
+}
+
+// Riporta la frase decriptata
+Console.WriteLine($"Decrypt Text: {decryptText}");
+
+
+
+return;
+
+
+
+
+
+// Esercizio Fibonacci
+//Si chiede di implementare 
+//1 - Fattoriale di un numero
+//2 - La sequenza di 
+//1) il fattoriale di un numero 
+//0! = 1
+//1! = 1
+//2! = 2
+//3! = 6
+//4! = 24
+//5! = 120
+//N! = ???
+//risolverla in modo RICORSIVO
+//o anche in modo ITERATIVO (FOR)
+//n Fn
+//0	0
+//1	1
+//2	1
+//3	2
+//4	3
+//5	5
+//6	8
+//7	13
+//8	21
+//9	34
+//10	55
+//fibonacci(10) = 55
+//isolverla in modo RICORSIVO
+//o anche in modo ITERATIVO (FOR)
+
+
+
+
+
+
+
+
 void StampaArray(int[] array)
 {
     Console.Write("[ ");
